@@ -54,6 +54,14 @@ document.getElementById('telefone').addEventListener('blur', function(e) {
     }
 });
 
+// Form submission loading
+document.querySelector('form').addEventListener('submit', function() {
+    const submitBtn = document.getElementById('submit-btn');
+    submitBtn.textContent = 'Enviando...';
+    submitBtn.classList.add('loading');
+    submitBtn.disabled = true;
+});
+
 // Add loading animation
 window.addEventListener('load', function() {
     document.body.style.opacity = '0';
